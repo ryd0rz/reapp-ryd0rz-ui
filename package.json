@@ -1,0 +1,55 @@
+{
+  "name": "reapp-ui",
+  "version": "0.12.85",
+  "description": "A set of components for building themeable, adaptive, animated UI's",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir build --stage=0",
+    "watch": "babel src --out-dir build --stage=0 --watch",
+    "copyAssets": "cp -r assets package.json build",
+    "release": "npm run copyAssets && (cd build && npm publish)",
+    "patch": "npm version patch && npm run release"
+  },
+  "browserify": {
+    "transform": [
+      "svg-browserify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ryd0rz/reapp-ryd0rz-ui"
+  },
+  "author": "Nate Wienert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryd0rz/reapp-ryd0rz-ui/issues"
+  },
+  "homepage": "https://github.com/ryd0rz/reapp-ryd0rz-ui",
+  "dependencies": {
+    "browserify-css": "^0.9.1",
+    "classnames": "^2.2.3",
+    "css-to-matrix": "^1.0.0",
+    "fuzzy": "^0.1.1",
+    "lodash": "^4.11.1",
+    "lodash.merge": "^4.0.1",
+    "observable-state": "^0.3.4",
+    "radium": "^0.16.4",
+    "react": "^15.1.0",
+    "react-addons-transition-group": "^15.0.1",
+    "react-addons-update": "^15.0.1",
+    "react-animate-state": "^1.0.1",
+    "react-dom": "^15.0.1",
+    "react-style-normalizer": "^1.2.8",
+    "reapp-component": "^1.0.2",
+    "reapp-object-assign": "^1.0.0",
+    "reapp-scroller": "^1.0.8",
+    "recompose": "^0.17.0",
+    "shallow-equals": "0.0.0",
+    "svg-browserify": "0.0.2",
+    "validator": "^3.40.0"
+  },
+  "devDependencies": {
+    "babel": "^5.2.6",
+    "browserify-css": "^0.9.1"
+  }
+}
